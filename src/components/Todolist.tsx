@@ -7,14 +7,14 @@ interface TodoListProps {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
   completedTodos: Todo[];
-  setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  setCompletedTodos ?:React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
 const TodoList: React.FC<TodoListProps> = ({
   todos,
   setTodos,
   completedTodos,
-  setCompletedTodos,
+
 }) => {
   return (
     <div className="container">
